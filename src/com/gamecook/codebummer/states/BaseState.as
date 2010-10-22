@@ -23,7 +23,12 @@ package com.gamecook.codebummer.states
         protected var scoreboard:CodeBummerScoreboard;
         protected var scoreTxt:FlxText;
         protected var nextScreen:Class;
-        protected var nextScreenTimer:Timer;
+        //protected var nextScreenTimer:Timer;
+
+        protected var nextScreenCounter:Number = 0;
+        protected var nextScreenDelay:Number = 0;
+
+
 
         public function BaseState()
         {
@@ -51,29 +56,33 @@ package com.gamecook.codebummer.states
             scoreTxt = add(new FlxText(scoreLabel.x - 50, scoreLabel.height, 150, FlxG.score.toString()).setFormat(null, 18, 0xffe00000, "right")) as FlxText;
         }
 
-        protected function startNextScreenTimer(value:Class, delay:int = 10000):void
+        protected function startNextScreenTimer(value:Class, delay:int = 15):void
         {
+            nextScreenDelay = delay;
+
+            CONFIG::mobile
+            {
+                nextScreenDelay = nextScreenDelay/2;
+            }
+
             nextScreen = value;
-            nextScreenTimer = new Timer(delay, 1);
-            nextScreenTimer.addEventListener(TimerEvent.TIMER_COMPLETE, onNextScreen);
-            nextScreenTimer.start();
         }
 
         protected function onNextScreen(event:TimerEvent = null):void
         {
-            killNextScreenTimer();
             FlxG.state = new nextScreen();
         }
 
-        protected function killNextScreenTimer():void
+        override public function update():void
         {
-            if (nextScreenTimer)
+            if(nextScreen)
             {
-                nextScreenTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, onNextScreen);
-                nextScreenTimer.stop();
-                nextScreenTimer = null;
+                nextScreenCounter += FlxG.elapsed;
+                if(nextScreenCounter >= nextScreenDelay)
+                    onNextScreen();
             }
-        }
 
+            super.update();
+        }
     }
 }

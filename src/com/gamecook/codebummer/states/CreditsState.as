@@ -11,6 +11,8 @@ package com.gamecook.codebummer.states
 
     import flash.events.MouseEvent;
 
+    import flash.events.TimerEvent;
+
     import org.flixel.FlxG;
     import org.flixel.FlxSprite;
 
@@ -32,15 +34,15 @@ package com.gamecook.codebummer.states
 
 
             stage.addEventListener(MouseEvent.CLICK, onClick);
-            startNextScreenTimer(AboutState);
+            startNextScreenTimer(AboutState, 10);
         }
 
         private function onClick(event:MouseEvent = null):void
         {
             if (clickDelay <= 0)
             {
-                killNextScreenTimer();
-                FlxG.state = new StartState();
+                nextScreen = StartState;
+                onNextScreen()
             }
         }
 
@@ -55,10 +57,11 @@ package com.gamecook.codebummer.states
             super.render();
         }
 
-        override protected function killNextScreenTimer():void
+        override protected function onNextScreen(event:TimerEvent = null):void
         {
             stage.removeEventListener(MouseEvent.CLICK, onClick);
-            super.killNextScreenTimer();
+
+            super.onNextScreen(event);
         }
     }
 }
