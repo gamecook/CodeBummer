@@ -38,9 +38,9 @@ com.gamecook.codebummer.states
         private var flickerTime:int = 0;
         private const FLICKER_DELAY:int = 100;
 
-        private var storyXML:XML = <story>It was a dark time for Flash developers. The evil Apple empire almost exterminated them all. And out of the ashes rose a new type of interactive developer, one who was not afraid to learn multiple languages and explore different platforms. This developer’s name was Code Bum.
+        private var storyXML:XML = <story>It was a dark time for Flash developers. Out of the ashes of the dot-com bubble pop rose a new type of interactive developer, one who was not afraid to beg, barter or steal for his next job. This developer’s name was Code Bum.
 
-        Code Bum wanders the streets of New York City looking for new clients to help expand his programming knowledge. This is his story...
+Code Bum wanders the streets of New York City looking for new clients to help expand his programming knowledge. This is his story...
         </story>;
 
         private var activateText:FlxText;
@@ -62,6 +62,7 @@ com.gamecook.codebummer.states
         {
             super.create();
 
+            //TODO replace this with a timer loop on update
             timer = new Timer(500, 1);
             timer.addEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
             timer.start();
@@ -100,7 +101,6 @@ com.gamecook.codebummer.states
         {
             timer.removeEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
             timer.stop();
-            killNextScreenTimer();
             FlxG.level = 0;
             FlxG.score = 0;
             // Sound is played after the state switch to keep it from being destroyed
