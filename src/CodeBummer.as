@@ -17,16 +17,8 @@ package {
 
         public function CodeBummer() {
 
-            var gameX:int = stage.stageWidth > 480 ? (stage.stageWidth - 480) * .5 : 0;
-            var gameY:int = stage.stageHeight > 800 ? (stage.stageHeight - 800) * .5 : 0;
-
-            if( gameX + gameY != 0)
-            {
-                var bitmap:Bitmap = new BackgroundImage();
-                addChild(bitmap);
-            }
-
-            var game:CodeBummerGame= new CodeBummerGame(gameX, gameY);
+            var game:CodeBummerGame= new CodeBummerGame(0, 0);
+            game.scaleX = game.scaleY = stage.stageWidth / 480;
 
             addChild(game);
         }
