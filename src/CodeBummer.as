@@ -1,41 +1,34 @@
-/*
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+/**
+ * Created by IntelliJ IDEA.
+ * User: jfreeman
+ * Date: 10/9/10
+ * Time: 6:37 PM
+ * To change this template use File | Settings | File Templates.
  */
+package {
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
 
-package
-{
-    import com.gamecook.codebummer.states.StartState;
+    [SWF(width="600",height="1024",backgroundColor="#000000",frameRate="60")]
+    public class CodeBummer extends Sprite{
 
-    import org.flixel.FlxGame;
+        [Embed(source="../build/assets/CodeBummerTabBackground.jpg")]
+        public static var BackgroundImage:Class;
 
-    [SWF(width="480", height="800", backgroundColor="#000000")]
+        public function CodeBummer() {
 
-    public class CodeBummer extends FlxGame
-    {
-        /**
-         * This is the main game constructor.
-         */
-        public function CodeBummer()
-        {
-            // Create Flixel Game.
-            super(480, 800, StartState, 1);
+            var gameX:int = stage.stageWidth > 480 ? (stage.stageWidth - 480) * .5 : 0;
+            var gameY:int = stage.stageHeight > 800 ? (stage.stageHeight - 800) * .5 : 0;
+
+            if( gameX + gameY != 0)
+            {
+                var bitmap:Bitmap = new BackgroundImage();
+                addChild(bitmap);
+            }
+
+            var game:CodeBummerGame= new CodeBummerGame(gameX, gameY);
+
+            addChild(game);
         }
-
     }
 }
