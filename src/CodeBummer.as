@@ -13,12 +13,19 @@ package {
     public class CodeBummer extends Sprite{
 
         public function CodeBummer() {
-
-            var game:CodeBummerGame= new CodeBummerGame();
-
-            if(stage.fullScreenWidth > 480)
-                game.scaleX = game.scaleY = stage.fullScreenWidth / 480;
-
+			
+            var game:CodeBummerGame= new CodeBummerGame(0, 600);
+			
+            CONFIG::mobile
+            {
+            	if(stage.fullScreenHeight > 600)
+                	game.scaleX = game.scaleY = stage.fullScreenHeight / 480;
+            }
+			
+			//ScreenRotation.rotate(game, stage.fullScreenWidth, stage.fullScreenHeight, 2);
+			game.rotation = -90;
+			//game.y = 
+			//game.y += 100;
             addChild(game);
         }
     }
