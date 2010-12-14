@@ -25,6 +25,7 @@ Thumbs.db
 build.properties
 /*.iml
 /apks/*
+/chrome/*
 .*.swp
 *~
 

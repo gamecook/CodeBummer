@@ -15,6 +15,7 @@
     <import file="${includes.loc}/compile-swf.xml" />
     <import file="${includes.loc}/android.xml" />
     <import file="${includes.loc}/compile-swc.xml" />
+    <import file="${includes.loc}/chrome.xml" />
 
     <target name="usage" depends="misc.usage" description="Prints usage message" />
 
@@ -35,6 +36,12 @@
         <var name="mobile" value="true" />
         <runtarget target="compile" />
         <runtarget target="android.package-apk" />
+    </target>
+
+    <target name="package-chrome-app" description="Packages up project for deployment to android">
+        <var name="mobile" value="false" />
+        <runtarget target="compile" />
+        <runtarget target="chrome.package-chrome-app" />
     </target>
 
     <target name="deploy-to-emulator" depends="package-apk,android.deploy-to-emulator" />
