@@ -16,8 +16,11 @@ package {
 
             var game:CodeBummerGame= new CodeBummerGame();
 
-            if(stage.fullScreenWidth > 480)
-                game.scaleX = game.scaleY = stage.fullScreenWidth / 480;
+            if(CONFIG::mobile)
+            {
+                if(stage.fullScreenWidth > 480)
+                    game.scaleX = game.scaleY = stage.fullScreenWidth / 480;
+            }
 
             addChild(game);
         }
