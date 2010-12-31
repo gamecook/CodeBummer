@@ -18,7 +18,7 @@ package {
 			
             CONFIG::mobile
             {
-            	if(stage.fullScreenHeight > 600)
+            	if(stage.fullScreenHeight > 480)
                 	game.scaleX = game.scaleY = stage.fullScreenHeight / 480;
             }
 			
