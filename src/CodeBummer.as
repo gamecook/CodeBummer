@@ -13,7 +13,7 @@ package {
     public class CodeBummer extends Sprite{
 
         public function CodeBummer() {
-			
+
             var game:CodeBummerGame= new CodeBummerGame(0, 600);
 			
             CONFIG::mobile
@@ -29,7 +29,7 @@ package {
 			}
 			
 			game.rotation = -90;
-			
+
             addChild(game);
         }
     }

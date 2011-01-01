@@ -107,10 +107,10 @@
 	<!-- The icon the system uses for the application. For at least one resolution,
 	specify the path to a PNG file included in the AIR package. Optional. -->
 	<icon>
-		<image36x36>assets/icons/app-logo-36x36.png</image36x36>
-		<image48x48>assets/icons/app-logo-48x48.png</image48x48>
-		<image72x72>assets/icons/app-logo-72x72.png</image72x72>
-		<!--<image128x128></image128x128>-->
+		<!-- <image36x36>assets/icons/icon-36x36.png</image36x36>
+		<image48x48>assets/icons/icon-48x48.png</image48x48>
+		<image72x72>assets/icons/icon-72x72.png</image72x72>-->
+		<image128x128>assets/icons/icon-128x128.png</image128x128>
 	</icon>
 	
 	<!-- Whether the application handles the update when a user double-clicks an update version
