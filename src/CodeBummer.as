@@ -18,14 +18,18 @@ package {
 			
             CONFIG::mobile
             {
-            	if(stage.fullScreenHeight > 480)
-                	game.scaleX = game.scaleY = stage.fullScreenHeight / 480;
+				if(stage.fullScreenWidth > 480)
+					game.scaleX = game.scaleY = stage.fullScreenWidth / 480;
             }
 			
-			//ScreenRotation.rotate(game, stage.fullScreenWidth, stage.fullScreenHeight, 2);
+			CONFIG::playbook
+			{
+				if(stage.fullScreenHeight > 480)
+					game.scaleX = game.scaleY = stage.fullScreenHeight / 480;
+			}
+			
 			game.rotation = -90;
-			//game.y = 
-			//game.y += 100;
+			
             addChild(game);
         }
     }
