@@ -99,6 +99,7 @@
             <arg value="-use-network=false"/>
             <arg value="-default-frame-rate=31"/>
             <arg value="-define=CONFIG::mobile,${mobile}"/>
+            <arg value="-define=CONFIG::playbook,${playbook}"/>
         </java>
 
         <echo>[compile] ${mode.name} SWF ${project.name.versioned}.swf created successfully</echo>

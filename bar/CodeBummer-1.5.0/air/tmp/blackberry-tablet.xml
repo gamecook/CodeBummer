@@ -1,0 +1,12 @@
+<qnx>
+  <initialWindow>
+    <systemChrome>none</systemChrome>
+    <transparent>false</transparent>
+  </initialWindow>
+  <publisher>Jesse Freeman</publisher>
+  <category>core.games</category>
+  <icon>
+   <image>icon72</image>
+  </icon>
+  <splashscreen>renaun_com_splash.png</splashscreen>
+</qnx>

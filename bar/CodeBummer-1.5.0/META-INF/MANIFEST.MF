@@ -1,0 +1,43 @@
+Archive-Manifest-Version: 1.1
+Archive-Created-By: BlackBerry Tablet OS BAR Packager 0.9.4
+
+Package-Type: application
+Package-Author: Unknown
+Package-Author-Id: testVW5rbm93biAgICAgICAgICA
+Package-Name: com.gamecook.CodeBummer
+Package-Id: testb2suQ29kZUJ1bW1lciAgICA
+Package-Version: 1.5.0.0
+Package-Version-Id: testMS41LjAuMCAgICAgICAgICA
+Package-Architecture: armle-v7
+
+Application-Name: CodeBummer
+Application-Id: testY29tLmdhbWVjb29rLkNvZGU
+Application-Description: CodeBummer
+Application-Version: 1.5.0.0
+Application-Version-Id: testMS41LjAuMCAgICAgICAgICA
+Application-Requires-System: Tablet OS/1.0.0.0
+Application-Development-Mode: false
+
+Entry-Point-Name: CodeBummer
+Entry-Point: app/air/CodeBummer-air-app.xml
+Entry-Point-Type: Qnx/Air
+Entry-Point-Icon: air/blackberry-tablet-default-icon.png
+Entry-Point-Orientation: auto
+
+Archive-Asset-Name: air/CodeBummer-air-app.xml
+Archive-Asset-SHA-512-Digest: smCiEbViX95E8vwGdUIxeuTspMkdUR0c2RqjtIQoBvO9lrLpObLdCunBekwvpIBvW8zavvKd16DGtj_5e039aQ
+
+Archive-Asset-Name: air/blackberry-tablet-default-icon.png
+Archive-Asset-SHA-512-Digest: cDyyTf-3OIUlDa4QJas8D21pZ7sMV6suHDZNJoQzquGgsYrIItk0LIbcvzOIOgeuAl4CDONzM-NJ9POH_piHDw
+
+Archive-Asset-Name: air/tmp/blackberry-tablet.xml
+Archive-Asset-SHA-512-Digest: Oxq83Npkb6fIkr5qGRureF4NjN6MYLQ-v6V4Ura0s0WIecvQJFIf9-4WvxSXmTS5mepjWwvFaQdwgU4U2Xo_Nw
+
+Archive-Asset-Name: air/tmp/CodeBummer-1.5.0.swf
+Archive-Asset-SHA-512-Digest: o4BEhY_DCvaPp-G87ASlZoKJVU34hvxSmCk9ag2RQlPcxwXhADRYgCecuiGQ2wYWDQ6lSYQZSHBQ2m3rIalwLg
+
+Archive-Asset-Name: air/tmp/icon72.png
+Archive-Asset-SHA-512-Digest: M9qRY1i1dWDh050r9sniPiBSb_bJSbmsZwLFJaeMCEUfkOXFA36MF0L74o1-EVYPqinNwMpvHzPga6QcFKVqPQ
+
+Archive-Asset-Name: air/tmp/renaun_com_splash.png
+Archive-Asset-SHA-512-Digest: 44lJQPYQTlBPMB9NB9B-XDIpu1GYE0nEHCsJ7zgausGVAW5aw8mIU5UeIbbXqUcGHrJ44rIATC4TEtBBLPfnDg

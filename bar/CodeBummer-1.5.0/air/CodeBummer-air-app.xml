@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/2.6">
+    <id>com.gamecook.CodeBummer</id>
+    <filename>CodeBummer</filename>
+    <name>CodeBummer</name>
+    <versionNumber>1.5.0</versionNumber>
+    <initialWindow>
+        <content>CodeBummer-1.5.0.swf</content>
+        <autoOrients>true</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>false</visible>
+    </initialWindow>
+
+</application>

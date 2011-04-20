@@ -1,0 +1,12 @@
+<qnx>
+  <initialWindow>
+    <systemChrome>none</systemChrome>
+    <transparent>false</transparent>
+  </initialWindow>
+  <publisher>Jesse Freeman</publisher>
+  <category>core.games</category>
+  <icon>
+   <image>icon72.png</image>
+  </icon>
+  <splashscreen>CodeBummerPlaybookLoadScreen.jpg</splashscreen>
+</qnx>

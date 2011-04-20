@@ -16,6 +16,7 @@
     <import file="${includes.loc}/android.xml" />
     <import file="${includes.loc}/compile-swc.xml" />
     <import file="${includes.loc}/chrome.xml" />
+    <import file="${includes.loc}/playbook.xml" />
 
     <target name="usage" depends="misc.usage" description="Prints usage message" />
 
@@ -36,6 +37,13 @@
         <var name="mobile" value="true" />
         <runtarget target="compile" />
         <runtarget target="android.package-apk" />
+    </target>
+
+
+    <target name="package-bar" description="Packages up project for deployment to android">
+        <var name="mobile" value="true" />
+        <runtarget target="compile" />
+        <runtarget target="playbook.package-bar" />
     </target>
 
     <target name="package-chrome-app" description="Packages up project for deployment to android">
